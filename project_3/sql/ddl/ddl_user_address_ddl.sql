@@ -1,0 +1,1 @@
+create table user_address_2018_snapshots (first_name varchar(256) NOT NULL, last_name varchar(256) NOT NULL, email varchar(256) NOT NULL, address varchar(256) NOT NULL, created_at timestamp NOT NULL);

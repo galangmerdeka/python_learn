@@ -6,7 +6,7 @@ import sqlalchemy as sql_dml
 # D:\Python\python_learn\project_3\schemas
 schema_json = 'D:/Python/python_learn/project_3/schemas/user_address.json'
 create_schema_sql = """create table user_address_2018_snapshots {};"""
-data_set_csv = 'D:/Python/python_learn/project_3/temp/dataset-small.csv'
+data_set_csv_small = 'D:/Python/python_learn/project_3/temp/dataset-small.csv'
 database = 'shipping_orders'
 user = 'postgres'
 password = 'admin'
@@ -61,7 +61,7 @@ except pg.errors.DuplicateTable:
     print("Table already created..")
 
 # load from dataset.csv
-df = pd.read_csv(data_set_csv, header=None)
+df = pd.read_csv(data_set_csv_small, header=None)
 
 col_name_df = [c['column_name'] for c in content]
 df.columns = col_name_df
